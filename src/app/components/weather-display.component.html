@@ -1,0 +1,17 @@
+<!-- 
+    <div *ngIf="weather$ | async as weatherData; else noData"></div>
+
+        -->
+
+
+    <h2>Weather report</h2>
+    <table>
+      <tr *ngFor="let w of weather">
+        <td><img src="https://openweathermap.org/img/wn/{{w.icon}}@2x.png"></td>
+        <td><code> {{w.main}} - {{w.description}} </code></td>    
+      </tr>
+    </table>
+  
+  <ng-template #noData>
+    <h2>Please key in city</h2>
+  </ng-template>
